@@ -1,4 +1,4 @@
-package com.dandanpili.arithmetic.quicksort;
+package com.dandanpili.arithmetic.sort;
 
 /**
  * @author shaoruilin
