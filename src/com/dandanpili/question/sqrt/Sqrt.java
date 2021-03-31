@@ -5,34 +5,33 @@ package com.dandanpili.question.sqrt;
  * @create 2021-03-20-17:44
  */
 //不使用Math函数，求一个数的开平方，结果精确到0.00001
-public class Sqrt
-{
+public class Sqrt {
+    //需要精确到的精度
+    private static double precision = 0.0000000001;
     public static void main(String[] args) {
-        float result = sqrt(0.09f);
-        String res = String.format("%.4f", result);
+        double result = sqrt(1.3f);
+        String res = String.format("%.10f", result);
         System.out.println(res);
     }
 
-    public static float sqrt(float n) {
+    public static double sqrt(double n) {
         if (n < 0) {
             return 0;
         }
-        float left = 0;
-        float right = n;
+        double left = 0;
+        double right = n;
         if (n < 1) {
             right = 1;
         }
-        float mid = left + (right - left) / 2;
-        while ((mid * mid) - n < -0.00001 || (mid * mid) -n > 0.00001) {
-            mid = left + (right - left) / 2;
-            System.out.println(mid);
-            if (mid * mid <= n) {
+        double mid = left + (right - left) / 2;
+        while ((mid * mid) - n < -precision || (mid * mid) -n > precision) {
+            if (mid * mid < n) {
                 left = mid;
             } else {
                 right = mid;
             }
+            mid = left + (right - left) / 2;
         }
         return mid;
-
     }
 }

@@ -1,4 +1,4 @@
-package com.dandanpili.com.dandanpili.design.singleton;
+package com.dandanpili.design.singleton;
 
 /**
  * @author shaoruilin
@@ -26,4 +26,6 @@ public class LazySingleton {
         }
         return lazySingleton;
     }
+
+    public native int getInt();
 }

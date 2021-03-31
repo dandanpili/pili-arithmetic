@@ -1,4 +1,4 @@
-package com.dandanpili.com.dandanpili.design.singleton;
+package com.dandanpili.design.singleton;
 
 /**
  * @author shaoruilin
